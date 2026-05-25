@@ -1,0 +1,23 @@
+"""
+OTP Constants
+"""
+
+# OTP Settings
+OTP_LENGTH = 6
+OTP_EXPIRY_MINUTES = 5
+OTP_MAX_ATTEMPTS = 5
+OTP_RESEND_LIMIT = 3
+OTP_LOCKOUT_MINUTES = 30
+
+# Rate Limiting
+OTP_RATE_LIMIT_REQUESTS = 5
+OTP_RATE_LIMIT_WINDOW_MINUTES = 5
+
+# SMS Settings
+SMS_GATEWAY_URL = "https://lighting-advantages-shoot-thriller.trycloudflare.com/send"
+SMS_TIMEOUT = 30
+
+# PIN Settings
+PIN_LENGTH = 6
+PIN_MIN_VALUE = 000000
+PIN_MAX_VALUE = 999999
