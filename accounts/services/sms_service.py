@@ -6,7 +6,6 @@ Sends SMS via Android gateway or mock mode
 import requests
 from django.conf import settings
 
-SMS_GATEWAY_URL = "https://lighting-advantages-shoot-thriller.trycloudflare.com/send"
 SMS_TIMEOUT = 30
 
 
@@ -21,13 +20,14 @@ class SMSService:
             return SMSService._mock_send(phone, message)
 
         try:
+            gateway_url = getattr(settings, 'SMS_GATEWAY_URL', 'http://localhost:8080/send')
             payload = {
                 "phone": phone,
                 "message": message
             }
 
             response = requests.post(
-                SMS_GATEWAY_URL,
+                gateway_url,
                 json=payload,
                 timeout=SMS_TIMEOUT
             )

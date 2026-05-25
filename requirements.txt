@@ -9,3 +9,4 @@ django-phonenumber-field==7.3.0
 phonenumbers==8.13.55
 django-auditlog==2.3.0
 whitenoise>=6.0,<7.0
+requests>=2.31,<3.0
